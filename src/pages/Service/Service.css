@@ -1,5 +1,5 @@
 .details-btn {
-  background-color: #023c76;
+  background-color: #237db2;
   color: white;
   border-radius: 5px;
   border: 0;
@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 .details-btn:hover {
-  background-color: rgb(71, 152, 245);
+  background-color: #023c76;
 }
 .cardHover:hover {
   transform: scale(1.03);

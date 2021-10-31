@@ -11,6 +11,12 @@ import PrivateRoute from "./route/PrivateRoute";
 import Home from "./pages/Home/Home";
 import AddService from "./pages/AddService/AddService";
 import Details from "./pages/Details";
+import Cart from "./pages/Cart";
+import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer/Footer";
+import ManageEvents from "./pages/ManageEvents/ManageEvents";
+import About from "./pages/About";
+import Guiders from "./pages/Guiders/Guiders";
 
 function App() {
   return (
@@ -25,31 +31,13 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <PrivateRoute path="/detail/:serviceId"></PrivateRoute>
-            {/* 
             <Route path="/about">
               <About></About>
             </Route>
-            <Route path="/dentist">
-              <Dentists></Dentists>
-            </Route>
-            <PrivateRoute path="/detail/:serviceId">
-              <Details></Details>
-            </PrivateRoute>
-
-            <Route path="/contact">
-              <Contact></Contact>
-            </Route>
-            <Route path="/login">
-              <Login></Login>
-            </Route>
-            <Route path="/signup">
-              <Signup></Signup>
+            <Route path="/guiders">
+              <Guiders></Guiders>
             </Route>
 
-            <Route path="*">
-              <NotFound></NotFound>
-            </Route>*/}
             <PrivateRoute path="/services/:id">
               <Details></Details>
             </PrivateRoute>
@@ -62,7 +50,18 @@ function App() {
             <Route path="/addservice">
               <AddService></AddService>
             </Route>
+            <Route path="/event">
+              <ManageEvents></ManageEvents>
+            </Route>
+            <Route path="/cart">
+              <Cart></Cart>
+            </Route>
+
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

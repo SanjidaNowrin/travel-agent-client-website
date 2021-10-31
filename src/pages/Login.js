@@ -35,7 +35,7 @@ const Login = () => {
         </div>
         <div className="col-lg-6 col-sm-12">
           <div className="p-4 my-5 text-center shadow-lg">
-            <h2 style={{ color: "#023c76" }}>Please Login</h2>
+            <h2 style={{ color: "#237DB2" }}>Please Login</h2>
             <p className="mt-2 mb-4 ">Login with Email & Password</p>
             <p className="text-center text-danger">{error}</p>
             <div className="mx-auto w-75">
@@ -100,7 +100,7 @@ const Login = () => {
                 <button
                   type="submit"
                   className="mt-2 border-0 btn btn-primary w-100"
-                  style={{ backgroundColor: "#023c76" }}
+                  style={{ backgroundColor: "#237DB2" }}
                 >
                   Login
                 </button>
@@ -130,36 +130,6 @@ const Login = () => {
                 className="btn"
               >
                 <img src={google} width="46px" alt="google-icon" />
-              </button>
-              <button
-                onClick={() => {
-                  signInWithFacebook()
-                    .then((result) => {
-                      setUser(result.user);
-                      history.push(redirect);
-                    })
-                    .catch((err) => {
-                      setError(err.message);
-                    });
-                }}
-                className="btn"
-              >
-                <img width="50px" src={facebook} alt="facebook-icon" />
-              </button>
-              <button
-                onClick={() => {
-                  signInWithGithub()
-                    .then((result) => {
-                      setUser(result.user);
-                      history.push(redirect);
-                    })
-                    .catch((err) => {
-                      setError(err.message);
-                    });
-                }}
-                className="btn"
-              >
-                <img width="55px" src={github} alt="github-icon" />
               </button>
             </div>
           </div>

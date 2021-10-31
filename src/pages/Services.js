@@ -1,19 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 import Service from "./Service/Service";
-import useAuth from "./../hooks/useAuth";
 
 const Services = () => {
-  const { detail } = useAuth();
+  const [detail, setDetail] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+      .then((res) => res.json())
+      .then((data) => setDetail(data));
+  }, []);
+
   return (
     <div className="container">
-      <div className="row">
-        <h1 style={{ color: "#023c76" }} className="container text-center">
-          -Our Services-
-        </h1>
-        {detail.map((service) => (
-          <Service service={service} key={service.id}></Service>
-        ))}
-      </div>
+      <h1 style={{ color: "#237DB2" }} className="container text-center">
+        OUR OFFERS
+      </h1>
+      {detail.length === 0 ? (
+        <div className="py-5 my-5 text-center">
+          <Spinner animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+        </div>
+      ) : (
+        <div className="row">
+          {detail.map((service) => (
+            <Service service={service} key={service._id}></Service>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

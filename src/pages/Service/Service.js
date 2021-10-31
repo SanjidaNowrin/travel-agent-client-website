@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Service.css";
+import useAuth from "./../../hooks/useAuth";
 
 const Service = ({ service }) => {
-  const { name, img, desc, _id } = service;
+  const { title, img, desc, _id } = service;
+  const { allContext } = useAuth();
+  const { user } = allContext;
+  const { uid } = user;
   return (
     <div className="mt-5 col-lg-4 col-sm-6 gx-5">
       <div
@@ -16,12 +20,12 @@ const Service = ({ service }) => {
             className="mb-3 text-center card-title font-weight-bold"
             style={{ color: "#023c76" }}
           >
-            {name}
+            {title}
           </h3>
           <p className="text-center card-text">{desc}</p>
           <br />
           <Link to={`/services/${_id}`}>
-            <button className="container details-btn">View Details</button>
+            <button className="container details-btn">Book Now</button>
           </Link>
         </div>
       </div>

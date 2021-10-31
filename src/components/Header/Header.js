@@ -11,7 +11,11 @@ const Header = () => {
   const { displayName, photoURL, email } = user;
   return (
     <div className="sticky-top">
-      <Navbar style={{ backgroundColor: "#023c76" }} expand="lg">
+      <Navbar
+        style={{ backgroundColor: "#237DB2" }}
+        expand="lg"
+        className="p-0"
+      >
         <Container>
           <Navbar.Brand to="/home" as={NavLink} className="text-white">
             <img width="180px" src={logo} alt="Logo" className="img-fluid" />
@@ -19,26 +23,44 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
-              <Nav.Link as={NavLink} className="text-white" to="/home">
+              <Nav.Link
+                as={NavLink}
+                className="text-white fw-bolder"
+                to="/home"
+              >
                 HOME
               </Nav.Link>
-              <Nav.Link as={NavLink} className="text-white" to="/about">
+              <Nav.Link
+                as={NavLink}
+                className="text-white fw-bolder"
+                to="/about"
+              >
                 ABOUT
               </Nav.Link>
-              <Nav.Link as={NavLink} className="text-white" to="/dentist">
-                DENTIST
-              </Nav.Link>
-              <Nav.Link as={NavLink} className="text-white" to="/contact">
-                CONTACT
+
+              <Nav.Link
+                as={NavLink}
+                className="text-white fw-bolder"
+                to="/guiders"
+              >
+                OUR GUIDERS
               </Nav.Link>
 
               {!user.displayName ? (
                 <>
-                  <Nav.Link className="text-white" as={NavLink} to="/login">
+                  <Nav.Link
+                    className="text-white fw-bolder"
+                    as={NavLink}
+                    to="/login"
+                  >
                     LOG IN
                   </Nav.Link>
 
-                  <Nav.Link className="text-white" as={NavLink} to="/signup">
+                  <Nav.Link
+                    className="text-white fw-bolder"
+                    as={NavLink}
+                    to="/signup"
+                  >
                     SIGN UP
                   </Nav.Link>
                 </>
@@ -57,14 +79,37 @@ const Header = () => {
                     <p className="m-0 mb-2">{email}</p>
                     <button
                       onClick={logOut}
-                      style={{ backgroundColor: "#023c76" }}
-                      className="border-0 btn btn-primary"
+                      style={{ backgroundColor: "#237DB2" }}
+                      className="border-0 btn btn-primary fw-bolder"
                     >
                       Log Out
                     </button>
                   </div>
-                  <Nav.Link as={NavLink} className="text-dark" to="/addservice">
-                    Add Service
+                  <hr />
+                  <Nav.Link
+                    as={NavLink}
+                    className="p-4 text-center text-white fw-bolder"
+                    to="/addservice"
+                    style={{ backgroundColor: "#237DB2" }}
+                  >
+                    Add Destination
+                  </Nav.Link>
+
+                  <Nav.Link
+                    as={NavLink}
+                    className="p-4 text-center text-white fw-bolder"
+                    to="/cart"
+                    style={{ backgroundColor: "#237DB2" }}
+                  >
+                    Booking Placed
+                  </Nav.Link>
+                  <Nav.Link
+                    as={NavLink}
+                    className="p-4 text-center text-white fw-bolder"
+                    to="/event"
+                    style={{ backgroundColor: "#237DB2" }}
+                  >
+                    Manage Booking
                   </Nav.Link>
                 </NavDropdown>
               )}

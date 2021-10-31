@@ -24,7 +24,7 @@ const Signup = () => {
         </div>
         <div className="col-lg-6 col-sm-12">
           <div className="p-5 my-4 text-center shadow-lg">
-            <h2 style={{ color: "#023c76" }}>Please Sign Up</h2>
+            <h2 style={{ color: "#237DB2" }}>Please Sign Up</h2>
             <p className="mt-2 mb-4 ">Sign Up with Email & Password</p>
             <p className="text-center text-danger">{error}</p>
             <div className="mx-auto w-75 ">
@@ -124,7 +124,7 @@ const Signup = () => {
                 <button
                   type="submit"
                   className="mt-2 btn btn-primary w-100"
-                  style={{ backgroundColor: "#023C76" }}
+                  style={{ backgroundColor: "#237DB2" }}
                 >
                   Sign up
                 </button>

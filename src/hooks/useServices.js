@@ -9,6 +9,7 @@ const useServices = () => {
       .then((res) => res.json())
       .then((data) => setDetail(data));
   }, []);
+
   return { detail, setDetail };
 };
 

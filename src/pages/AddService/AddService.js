@@ -8,7 +8,6 @@ const AddService = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -21,56 +20,49 @@ const AddService = () => {
     })
       .then((res) => res.json())
       .then((result) => console.log(result));
-    console.log(data);
+    alert("Destination Added");
   };
   return (
-    <div>
-      <h1 className="mt-5 text-center text-info">Please Add Events</h1>
-      <div className="m-auto mt-5 login-box w-25">
-        <div className="border event-box d-flex justify-content-center align-items-center">
-          <div className="login-form">
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <input
-                {...register("name")}
-                placeholder="name"
-                className="p-2 m-2 w-100"
-              />
-              <br />
-              <input
-                {...register("date")}
-                // placeholder="Name"
-                type="date"
-                className="p-2 m-2 w-100"
-              />
-              <br />
-              <input
-                {...register("desc")}
-                placeholder="Description"
-                className="p-2 m-2"
-                className="p-2 m-2 w-100"
-              />
-              <br />
+    <div className="mb-5">
+      <h1 className="mt-5 text-center " style={{ color: "#237DB2" }}>
+        Please Add Destinations
+      </h1>
+      <div lassName="mt-0 col-md-6">
+        <div className="p-3 m-auto mt-5 mb-5 rounded shadow login-box w-25 bg-body">
+          <div className="border border-0 event-box d-flex justify-content-center align-items-center">
+            <div className="mt-3 login-form">
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                  {...register("name")}
+                  placeholder="name"
+                  className="p-3 m-2 w-100"
+                />
 
-              <input
-                {...register("img", { required: true })}
-                placeholder="Image Link"
-                className="p-2 m-2"
-                className="p-2 m-2 w-100"
-              />
-              <br />
-              {/* <select {...register("EventColor")} className="p-2 m-2 w-100">
-                <option value="red">red</option>
-                <option value="green">green</option>
-                <option value="blue">blue</option>
-                <option value="orange">orange</option>
-                <option value="black">black</option>
-              </select> */}
-              <br />
+                <br />
+                <input
+                  {...register("desc")}
+                  placeholder="Description"
+                  className="p-3 m-2 w-100"
+                />
+                <br />
 
-              {errors.exampleRequired && <span>This field is required</span>}
+                <input
+                  {...register("img", { required: true })}
+                  placeholder="Image Link"
+                  className="p-3 m-2 w-100"
+                />
+                <br />
 
-              <input type="submit" value="Add" className="btn btn-info w-50" />
-            </form>
+                {errors.exampleRequired && <span>This field is required</span>}
+
+                <input
+                  type="submit"
+                  value="Add"
+                  className="mt-3 mb-3 btn w-50"
+                  style={{ backgroundColor: "#237DB2", color: "white" }}
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>
