@@ -18,7 +18,7 @@ const Details = () => {
   const onSubmit = (data) => {
     const newData = { ...data };
     newData.status = "pending";
-    fetch("http://localhost:5000/course/add", {
+    fetch("https://hidden-fortress-17783.herokuapp.com/course/add", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(newData),
@@ -34,7 +34,7 @@ const Details = () => {
       });
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/services/${id}`)
+    fetch(`https://hidden-fortress-17783.herokuapp.com/services/${id}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);

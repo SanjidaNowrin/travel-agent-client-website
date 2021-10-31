@@ -10,7 +10,7 @@ const Cart = () => {
   const { email } = user;
 
   useEffect(() => {
-    const query = `http://localhost:5000/singlecart?email=${email}`;
+    const query = `https://hidden-fortress-17783.herokuapp.com/singlecart?email=${email}`;
     fetch(query)
       .then((res) => res.json())
       .then((data) => setCarts(data));

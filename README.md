@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Travelicious Tour Agency
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Client Website Link [Click Here](https://travel-agent-d7a62.web.app/)
 
-## Available Scripts
+## Live Server site Link [Click Here](https://hidden-fortress-17783.herokuapp.com/)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+## Travelicious is a Tour Agency.This agency Offer A No-Quibble 14 Day Money Back Guarantee On All Unredeemed Vouchers able to find A New Destination to visit their desire destination.It's thrilling, exhilarating and fun, fun, fun. So whether you're looking to dive right down into the hustle and bustle of the beating heart.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Overview
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### . From website anyone can see our provided services.
 
-### `npm test`
+### . By clicking book now button he/she will be able to confirm their booking.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### . Here there are three more facilities and they are Add Destination,Booking Placed,Manage Booking.
 
-### `npm run build`
+### . By using add destination section they will be able to add their desire destination service.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### . Booking placed section used for stored booking confirmed data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### . Using Manage Booking we are able to see all our services and it provide delete facilities also.

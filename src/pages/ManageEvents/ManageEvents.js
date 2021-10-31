@@ -8,13 +8,13 @@ const ManageEvents = () => {
   const [control, setConrol] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/allEvents")
+    fetch("https://hidden-fortress-17783.herokuapp.com/allEvents")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, [control]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/deleteEvent/${id}`, {
+    fetch(`https://hidden-fortress-17783.herokuapp.com/deleteEvent/${id}`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
     })
