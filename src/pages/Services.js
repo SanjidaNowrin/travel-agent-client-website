@@ -5,7 +5,7 @@ import Service from "./Service/Service";
 const Services = () => {
   const [detail, setDetail] = useState([]);
   useEffect(() => {
-    fetch(" https://travel-agent-website.onrender.com/services")
+    fetch("https://travel-agent-website.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setDetail(data));
   }, []);
